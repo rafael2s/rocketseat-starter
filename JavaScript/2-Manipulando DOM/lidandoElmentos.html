@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Starter JS</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" id="nome">
+        </div>
+        <script>
+            var linkElement = document.createElement('a');
+
+            linkElement.setAttribute('href', 'https://www.google.com');
+            linkElement.setAttribute('title', 'Site GOOGLE')
+
+            var textElement = document.createTextNode("Acessar GOOGLE");
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
+        
+            var inputElement = document.querySelector('#nome');
+            containerElement.removeChild(inputElement);
+        </script>
+    </body>
+</html>

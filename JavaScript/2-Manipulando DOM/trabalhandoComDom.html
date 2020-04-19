@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso Java</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome" id="nome" class="nome"/>
+            <button class="botao">Adicionar</button>
+        </div>
+        
+        <script>
+            // getElementById('') - buscar elemento pelo ID
+            // var inputElement = document.getElementById('nome'); 
+
+            // getELementByTagName('')[] - buscar elemento pela TAG - Obs sempre retornar um array/vetor
+            // var inputElement = document.getElementsByTagName('input');
+
+            // getElementsByClassName - buscar elemento pelo class e sempre volta um array
+            // var inputElement = document.getElementsByClassName('nome');
+            
+            // querySelector - diferente dos outros ele permite percorrer toda a DOM, exemplo abaixo.
+            // var inputElement = document.querySelector('body div#app input');
+            // var inputElement = document.querySelector('div#app input');
+
+            // Tambem da para usar os atributos, exemplo abaixo.
+            // var inputElement = document.querySelector('input[name=nome]');
+
+            var inputElement = document.querySelector('input[name=nome]')
+            var btnElement = document.querySelector('button.botao');
+
+            btnElement.onclick = function() {
+                var text = inputElement.value
+                alert(text); 
+            }
+            
+            console.log(btnElement);
+        </script>
+    </body>
+</html>
